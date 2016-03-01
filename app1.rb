@@ -1,5 +1,5 @@
 require 'sinatra'
-require './lib/geburtstagsspiel/QandA.rb'
+require 'lib/geburtstagsspiel/QandA.rb'
 
 set :port, 8080
 set :static, true
