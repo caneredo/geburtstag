@@ -1,0 +1,38 @@
+ 
+<p><%= session[:werspielt]  %>, hier kommt dein erster Hinweis:</p>
+<p><%= antw %></p>
+
+ 
+<ol>
+  <% hinweise.each do |hw| %>
+    <li><%= hw %></li>
+  <% end %>
+</ol>
+
+
+<p>------------------------------</p>
+<p>Nummer Frage: <%= session[:q] %></p>
+<p>Punkte <%= session[:points] %></p>
+<p>Punktestand <%= session[:score] %></p>
+<p>Anzahl Hinweise<%= session[:h] %></p>
+<p>Ziel<%= session[:ziel] %></p>
+<p>Route <%= $route %></p>
+<p>------------------------------</p>
+ <p><%= nocheintipp %></p>
+ 
+ <% if h > 3 %>
+ <form action="/nextziel/" method="POST">
+    Unser Ziel ist: <input type="text" name="ziel">
+    <br/>
+    <input type="submit">
+    <button type="submit">Noch ein Hinweis</button>
+</form>
+ <% end %>
+  <% if h <= 3 %>
+ <form method="POST">
+    Unser Ziel ist: <input type="text" name="ziel">
+    <br/>
+    <input type="submit">
+    <button type="submit">Noch ein Hinweis</button>
+</form>
+ <% end %>

@@ -1,0 +1,18 @@
+<p>
+Herzlich Willkommen in der schönsten Stadt Deutschlands!
+</p>
+<p>
+Du bist neugierig warum das so ist... dann verrat mir wer du bist und ich zeige dir meine Stadt!
+</p>
+<form action="/Ablauf/" method="POST">
+    Ich heiße: <input type="text" name="name">
+    <br/>
+    <a href=""><button type="submit">Los gehts, zeig mir deine Stadt!</button></a>
+</form>
+
+<p>------------------------------</p>
+<p>Nummer Frage: <%= session[:q] %></p>
+<p>Punkte <%= session[:points] %></p>
+<p>Punktestand <%= session[:score] %></p>
+<p>Anzahl Hinweise<%= session[:h] %></p>
+<p>------------------------------</p>

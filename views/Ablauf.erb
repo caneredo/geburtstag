@@ -1,0 +1,25 @@
+<p>Willkommen zu deiner ganz persönlichen Stadttour <%= name %>.</p>
+<p>zum Ablauf:</p>
+<ul>
+    <li>Du bekommst einen Hinweis zu unserem nächsten Ziel</li>
+    <li>Anschließend hat du die Chance, das Ziel zu erraten oder weitere Tipps zu bekommen</li>
+    <li>Insgesamt gibt es eine Frage und 3 Hinweise zu jedem Ziel</li>
+    <li>Aber Achtung: mit jedem zusätzlichen Hinweis schwinden die Punkte für eine richtige Antwort</li>
+</ul>
+<p>Ein Beispiel:</p>
+<ul>
+    <li>Frage: -> richtige Antwort = 4 Punkte</li>
+    <li>Hinweis #1: -> richtige Antwort = 3 Punkte</li>
+    <li>Hinweis #2: -> richtige Antwort = 2 Punkte</li>
+    <li>Hinweis #3: -> richtige Antwort = 1 Punkte</li>
+    <li>Wird das nächste Ziel nicht erraten gibt es auch keine Punkte.</li>
+</ul>
+<a href="../stadttour"><button>Auf zum ersten Ziel!</button></a>
+
+<p>------------------------------</p>
+<p>Nummer Frage: <%= session[:q] %></p>
+<p>Punkte <%= session[:points] %></p>
+<p>Punktestand <%= session[:score] %></p>
+<p>Anzahl Hinweise<%= session[:h] %></p>
+<p>Ziel<%= session[:ziel] %></p>
+<p>------------------------------</p>

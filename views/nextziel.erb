@@ -1,0 +1,20 @@
+  <p>Check</p>
+  <p>------------------------------</p>
+<p>Nummer Frage: <%= session[:q] %></p>
+<p>Punkte <%= session[:points] %></p>
+<p>Punktestand <%= session[:score] %></p>
+<p>Anzahl Hinweise<%= session[:h] %></p>
+<p>Ziel<%= session[:ziel] %></p>
+<p>Route <%= $route %></p>
+<p>------------------------------</p>
+  <p>Name: <%= session[:h] %></p
+  <p>Name: <%= session[:werspielt] %></p>
+  
+  <p><%= session[:schade] %></p>
+  <p><%= session[:glueckwunsch] %></p>
+  
+<% if q != 8 %>   
+<a href="../stadttour"><button>Weiter zum nächsten Ziel!</button></a>
+<% else %>
+<a href="../spielende"><button>Weiter zum nächsten Ziel!</button></a>
+<% end %>
